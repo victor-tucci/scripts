@@ -28,6 +28,19 @@ int main()
         std::cout << "view_public_key : " << info.address.m_view_public_key << "\n";
         std::cout << "spend_public_key : " << info.address.m_spend_public_key << "\n";
     }
-
     return 0;
 }
+
+//in the cmake src/simplewallet/CMakeLists.txt
+//     add_executable(keyFetch sample.cpp)
+
+// target_link_libraries(keyFetch PRIVATE wallet
+// daemonizer
+// rpc_commands
+// cryptonote_core
+// mnemonics
+// Boost::program_options
+// filesystem
+// icu
+// Boost::thread
+// extra)
